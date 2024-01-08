@@ -145,7 +145,7 @@ func Test_defaultModelBuildTask_buildTargetGroupName(t *testing.T) {
 				tgProtocol:        elbv2model.ProtocolHTTPS,
 				tgProtocolVersion: elbv2model.ProtocolVersionHTTP1,
 				svcAndIngAnnotations: map[string]string{
-					"alb.ingress.kubernetes.io/target-group-prefix": "test-",
+					"alb.ingress.kubernetes.io/target-group-prefix": "test",
 				},
 			},
 			want: "test-22fbce26a7",
@@ -167,7 +167,7 @@ func Test_defaultModelBuildTask_buildTargetGroupName(t *testing.T) {
 				tgProtocol:        elbv2model.ProtocolHTTPS,
 				tgProtocolVersion: elbv2model.ProtocolVersionHTTP1,
 				svcAndIngAnnotations: map[string]string{
-					"alb.ingress.kubernetes.io/target-group-prefix": "test-prefix-this-is-too-long-",
+					"alb.ingress.kubernetes.io/target-group-prefix": "test-prefix-this-is-too-long",
 				},
 			},
 			want: "test-prefix-this-is-to22fbce26a7",
